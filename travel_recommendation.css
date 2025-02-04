@@ -28,6 +28,7 @@ nav ul {
 
 nav ul li p{
     display: inline;
+    margin: 0;
 }
 
 nav ul li{
@@ -37,12 +38,12 @@ nav ul li{
 
 nav ul div {
     position: relative;
-    width: 40%;
+    width: 50%;
     height: 100%;
     background-color: black;
     display: inline;
-    padding-left: 190px;
-    padding-right: 100px;
+    padding-left: 140px;
+    padding-right: 50px;
     text-align: center;
 }
 
@@ -73,19 +74,23 @@ nav input {
     color: blue;
 }
 
+/*body & other elements */
+
 body {
     margin: 0;
     background-image: url("./backgroundImg.jpg");
+    background-repeat: no-repeat;
+
 
 }
 
 h1 {
     position: relative;
-    padding-top: 10%;
     color: whitesmoke;
+    padding-top: 10%;
     width:min-content;
     display: block;
-    margin-left: 110px;
+    margin-left: 100px;
     font-weight: bold;
     font-size: 70px;
 }
@@ -93,11 +98,11 @@ h1 {
 body p{
     position: relative;
     color: whitesmoke;
-    width:25%;
+    width:40%;
     display: block;
     margin-left:110px;
 }
 
 #bookNowBtn {
-    margin-left: 110px;
+    margin-left: 100px;
 }
