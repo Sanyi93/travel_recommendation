@@ -79,7 +79,7 @@
   h1 {
       position: relative;
       color: whitesmoke;
-      width:min-content;
+      width:max-content;
       display: block;
       margin-left: 100px;
       font-weight: bold;
@@ -94,6 +94,56 @@
       font-weight:300;
       margin-left:100px;
       margin-bottom: 30px;
+  }
+
+  .container {
+    position: relative;
+    color: whitesmoke;
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 60px;
+    padding-left: 100px;
+  }
+
+   h3{
+    position:sticky;
+    color: whitesmoke;
+    width: min-content;
+    margin-left: 10px;
+    font-weight:800;
+    font-size: 30px;
+  } 
+
+  .teamMembers{
+    position: absolute;
+    width: 800px;
+    display: inline-block;
+    margin-right: 5px;
+    padding-bottom: 50px;
+  }
+
+  .person  {
+    position: relative;
+    width: 200px;
+    display: inline-block;
+    margin-right: 10px;
+    padding-left: 10px;
+  } 
+
+  h4 {
+    position: relative;
+    color: whitesmoke;
+    width: max-content;
+    display: block;
+    margin-right:10px;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  
+  .responsibility {
+    position: relative;
+    display: inline;
+    width: min-content;
   }
   
   #bookNowBtn {
