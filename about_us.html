@@ -3,14 +3,14 @@
 <html>
 <head>
         <title>About us</title>
-    <link rel ="stylesheet" href="./travel_recommendation.css"</link>
+    <link rel ="stylesheet" href="./about_us.css"</link>
 </head>
 
 <nav>
     <ul>
     <li><p>The Best Travel Recommendations</p></li>
     <div id="menuItems">
-        <li><a href= "./home_page.html" id="home">Home</a></li>
+        <li><a href= "./travel_recommendation.html" id="home">Home</a></li>
         <li><a href= "./about_us.html" id="aboutUs">About</a></li>
         <li><a href= "./contact_us.html" id="contactUs">Contact Us</a></li>
     </div>
@@ -25,22 +25,34 @@
 
 
 <!-- TODO: OUR TEAM -> make up some divs/forms -->
-    <div>
-        <p>OUR TEAM</p>
-        <ul>
-            <div>
-            <li>Martin</li>
+    <div class="container" >
+        <div class="teamHeader">
+        <h3>OUR TEAM</h3>
+        </div>
+            <div block="teamMembers">
+                <div class="person">
+                    <div class="personInfo">
+                        <h4>Martin May</h4>
+                        </p class="responsibility">Martin bears the main responsibility for our outstanding performance delivered to you</p>
+                    <button class="position">CEO</button>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="personInfo">
+                        <h4>Michelle July</h4>
+                        </p class="responsibility">Michelle takes care for the continous development of our team</p>
+                    <button class="position">Team Lead</button>
+                    </div>
+                </div>
+                <div class="person">
+                    <div class="personInfo">
+                        <h4>Louise Marche</h4>
+                        </p class="responsibility">Louise is responsible for bringing you closer to the hidden gems</p>
+                    <button class="position">Business Developer</button>
+                    </div>
+                </div>
             </div>
-            <div>
-            <li>Michelle</li>
-            </div>
-            <div>
-            <li>Louise</li>
-            </div>
-        </ul>
     </div>
-
-    <button id="bookNowBtn">BOOK NOW</button>
 
 </body>
 
