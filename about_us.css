@@ -89,7 +89,7 @@
   body p{
       position: relative;
       color: whitesmoke;
-      width:40%;
+      width:80%;
       display: block;
       font-weight:300;
       margin-left:100px;
@@ -100,34 +100,41 @@
     position: relative;
     color: whitesmoke;
     width: 100%;
-    display: inline-block;
+    display: block;
     padding-bottom: 60px;
     padding-left: 100px;
+    display: inline-block
   }
 
-   h3{
-    position:sticky;
+  .heading{
+width: min-content;
+display: inline-block;
+}
+
+    h3{
+    position:relative;
     color: whitesmoke;
+    background-color: none;
     width: min-content;
-    margin-left: 10px;
     font-weight:800;
-    font-size: 30px;
-  } 
+    font-size: 50px;
+}  
 
   .teamMembers{
-    position: absolute;
-    width: 800px;
+    position: sticky;
+    width: 1100px;
     display: inline-block;
-    margin-right: 5px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 
   .person  {
-    position: relative;
+    position: sticky;
     width: 200px;
     display: inline-block;
-    margin-right: 10px;
-    padding-left: 10px;
+    padding-right: 30px;
+    background-color: rgb(0, 100,0, 0.4);
+    margin-left: 60px;
+
   } 
 
   h4 {
@@ -146,8 +153,13 @@
     width: min-content;
   }
   
-  #bookNowBtn {
-      margin-left: 100px;
+  .position {
+      width:120px;
       color: whitesmoke;
       background-color: darkgreen;
+      position:relative;
+      font-size: 10px;
+      align-items: center;
+      margin-left: 40px;
+      border-radius: 90px;
   }
