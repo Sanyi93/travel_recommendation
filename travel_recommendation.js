@@ -14,8 +14,8 @@ const input = document.getElementById('searchBar').value.toLowerCase();
         .then(response => response.json())
         .then(data => {
             const recommendation = data.countries.find(item => item.name.toLowerCase() === input);
-
-            if(recommendation == 'country' || recommendation =='countries'){
+            // == 'country' || recommendation =='countries'
+            if(recommendation){
             const name1 = country[0].cities[0].name;
             const description1 = country[0].cities[0].description;
 
@@ -78,8 +78,19 @@ const input = document.getElementById('searchBar').value.toLowerCase();
     });
 }
 
+function searchRecommendation2(){
+    
+    fetch('travel_recommendation_api.json')
+             .then(response => response.json())
+             .then(data => {
+              loadedData = data;
+              console.log(loadedData);
+  })
+  .catch(error => console.error('Error loading the data:', error));
+}
+
 //running the searchRecommendation Method when the search btn clicked
-searchBtn.addEventListener("click", searchRecommendation);
+searchBtn.addEventListener("click", searchRecommendation2);
 
 
 
