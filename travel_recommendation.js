@@ -11,12 +11,12 @@ searchRecommendation(){
     const resultDiv2 = document.getElementById('result2');
     resultDiv2.innerHTML = "";
 
-fetch('travel_recommendation_api.json')
-    .then(response => response.json())
-    .then(data => {
-        const recommendation = data.countries.find(item => item.name.toLowerCase() === input);
+    fetch('travel_recommendation_api.json')
+        .then(response => response.json())
+        .then(data => {
+            const recommendation = data.countries.find(item => item.name.toLowerCase() === input);
 
-        if(recommendation == 'country' || recommendation =='countries'){
+            if(recommendation == 'country' || recommendation =='countries'){
             const name1 = data.countries[0].cities[0].name;
             const description1 = data.countries[0].cities[0].description;
 
@@ -33,7 +33,7 @@ fetch('travel_recommendation_api.json')
             resultDiv2.innerHTML += `<p>${description2}</p>`;
             resultDiv2.innerHTML += `<button id="visit">Visit</button>`;
 
-        } else if (recommendation == 'temple' || recommendation == 'temples') {
+            } else if (recommendation == 'temple' || recommendation == 'temples') {
             const name1 = data.temples[0].name;
             const description1 = data.temples[0].description;
 
