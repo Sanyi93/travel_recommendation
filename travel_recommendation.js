@@ -2,10 +2,9 @@ const searchBtn = document.getElementById('searchBtn');
 const clearBtn = document.getElementById('clearBtn');
 const bookNowBtn = document.getElementById('bookNowBtn');
 
+function searchRecommendation(){
 
-searchRecommendation(){
-
-    const input = document.getElementById('searchBar').value.toLowerCase();
+const input = document.getElementById('searchBar').value.toLowerCase();
     const resultDiv1 = document.getElementById('result1');
     resultDiv2.innerHTML = "";
     const resultDiv2 = document.getElementById('result2');
@@ -14,6 +13,7 @@ searchRecommendation(){
     fetch('travel_recommendation_api.json')
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             const recommendation = data.countries.find(item => item.name.toLowerCase() === input);
 
             if(recommendation == 'country' || recommendation =='countries'){
@@ -73,12 +73,11 @@ searchRecommendation(){
 
         }
     })
-    .catch(error => {
+        .catch(error => {
         console.error('Error: ', error);
         resultDiv1.innerHMTL = 'An error occurred while fetching the data';
     });
 }
-
 
 //running the searchRecommendation Method when the search btn clicked
 searchBtn.addEventListener("click", searchRecommendation);
