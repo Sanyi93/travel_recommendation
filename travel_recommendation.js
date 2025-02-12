@@ -13,11 +13,14 @@ const input = document.getElementById('searchBar').value.toLowerCase();
      fetch('travel_recommendation_api.json')
         .then(response => response.json())
         .then(data => {
+
+            console.log(data);
             const recommendation = data.countries.find(item => item.name.toLowerCase() === input);
+
             // == 'country' || recommendation =='countries'
             if(recommendation){
-            const name1 = country[0].cities[0].name;
-            const description1 = country[0].cities[0].description;
+            const name1 = recommendation[0].cities[0].name;
+            const description1 = recommendation[0].cities[0].description;
 
             const name2 = countries[0].cities[1].name;
             const description2 = countries[0].cities[1].description;
@@ -68,7 +71,7 @@ const input = document.getElementById('searchBar').value.toLowerCase();
             resultDiv2.innerHTML += `<button id="visit">Visit</button>`;
         } else {
 
-            resultDiv1.innerHtml = "We apologize, we could not find anything";
+            resultDiv1.inneHTML += "We apologize, we could not find anything";
 
         }
     })
@@ -90,7 +93,7 @@ function searchRecommendation2(){
 }
 
 //running the searchRecommendation Method when the search btn clicked
-searchBtn.addEventListener("click", searchRecommendation2);
+searchBtn.addEventListener("click", searchRecommendation);
 
 
 
