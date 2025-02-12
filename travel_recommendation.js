@@ -4,7 +4,7 @@ const bookNowBtn = document.getElementById('bookNowBtn');
 
 function searchRecommendation(){
 
-const input = document.getElementById('searchBar').value.toLowerCase();
+    const input = document.getElementById('searchBar').value.toLowerCase();
     const resultDiv1 = document.getElementById('result1');
     resultDiv2.innerHTML = "";
     const resultDiv2 = document.getElementById('result2');
@@ -85,15 +85,24 @@ function searchRecommendation2(){
     
     fetch('travel_recommendation_api.json')
              .then(response => response.json())
-             .then(data => {
-              loadedData = data;
-              console.log(loadedData);
-  })
-  .catch(error => console.error('Error loading the data:', error));
-}
+             .then(data => (console.log(data))
+            //   loadedData = data;
+            //   console.log(loadedData);
+  
+//   .catch(error => console.error('Error loading the data:', error));
+ )}
+
+ function colorChanged(){
+    clearBtn.style.backgroundColor = "black";
+
+ }
+
+
 
 //running the searchRecommendation Method when the search btn clicked
-searchBtn.addEventListener("click", searchRecommendation);
+searchBtn.addEventListener("click", searchRecommendation2);
+
+clearBtn.addEventListener("click", colorChanged);
 
 
 
