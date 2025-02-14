@@ -6,19 +6,20 @@ function searchRecommendation(){
 
     const input = document.getElementById('searchBar').value.toLowerCase();
     const resultDiv1 = document.getElementById('result1');
-    resultDiv2.innerHTML = "";
+    resultDiv1.innerHTML = "";
     const resultDiv2 = document.getElementById('result2');
     resultDiv2.innerHTML = "";
 
-     fetch('travel_recommendation_api.json')
+     fetch('destination_api.json')
         .then(response => response.json())
         .then(data => {
 
             console.log(data);
             const recommendation = data.countries.find(item => item.name.toLowerCase() === input);
+            //    const condition = data.conditions.find(item => item.name.toLowerCase() === input);
 
             // == 'country' || recommendation =='countries'
-            if(recommendation){
+            if(recommendation == 'country' || recommendation == 'countries'){
             const name1 = recommendation[0].cities[0].name;
             const description1 = recommendation[0].cities[0].description;
 
@@ -82,27 +83,49 @@ function searchRecommendation(){
 }
 
 function searchRecommendation2(){
+
+    const input = document.getElementById('searchBar').value.toLowerCase();
+    const resultDiv1 = document.getElementById('result1');
+    resultDiv1.innerHTML = "";
+    // const resultDiv2 = document.getElementById('result2');
+    // resultDiv2.innerHTML = "";
+
     
-    fetch('travel_recommendation_api.json')
-             .then(response => response.json())
-             .then(data => (console.log(data))
-            //   loadedData = data;
-            //   console.log(loadedData);
+    fetch('health_analysis.json')
+        .then(response => response.json())
+        .then(data => {
+            const condition = data.conditions.find(item => item.name.toLowerCase() === input);
+
+            if(condition){
+                const symptoms = condition.symptoms.join(', ');
+                const prevention = condition.prevention.join(', ');
+                const treatment = condition.treatment;
+
+                resultDiv1.innerHTML += `<h2>${condition.name}</h2>`;
+                resultDiv1.innerHTML += `img src="${condition.imagesrc} alth="hjh">`;
+                resultDiv1.innerHTML += `<p><strong>Symptoms:</strong> ${symptoms}</p>`;
+                resultDiv1.innerHTML += `<p><strong>Prevention:</strong> ${prevention}</p>`;
+                resultDiv1.innerHTML += `<p><strong>Treatment:</strong>${treatment}</p>`;
+            } else {
+                resultDiv1.innerHTML = "Couldn´t find anything";
+            }
+        })
+        .catch(error => {
+            console.error('Error: ', error);
+            resultDiv1.innerHTML = 'An error occurred while fetching the data';
+        });
+
+    }
   
 //   .catch(error => console.error('Error loading the data:', error));
- )}
+//  )}
 
  function colorChanged(){
     clearBtn.style.backgroundColor = "black";
 
  }
 
-
-
 //running the searchRecommendation Method when the search btn clicked
-searchBtn.addEventListener("click", searchRecommendation2);
+searchBtn.addEventListener("click", searchRecommendation);
 
 clearBtn.addEventListener("click", colorChanged);
-
-
-
