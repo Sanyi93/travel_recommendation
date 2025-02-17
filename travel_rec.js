@@ -2,20 +2,8 @@ const searchBtn = document.getElementById('searchBtn');
 const clearBtn = document.getElementById('clearBtn');
 const resultDiv = document.getElementById('searchCondition');
 const inputPlace = document.getElementById('searchBar');
-const input = inputPlace.innerText.toLowerCase();
-
-function searchAndDisplay(){
-    searchRecommendation();
-    displayRecommendation();
-}
-
-
-async function fetchingData(){
-    const response = await fetch('.travel_recommendation.api.json');
-    const data = await response.json();
-    return data;
-
-}
+const input = inputPlace.innerText.toLowerCase().valueOf.trim;
+let recommendations = [];
 
 function searchRecommendation(input){
     fetchingData()
@@ -41,6 +29,12 @@ function searchRecommendation(input){
                 });
 }
 
+async function fetchingData(){
+    const response = await fetch('travel_recommendation_api.json');
+    const data = await response.json();
+    return data;
+}
+
 function displayRecommendation(recommendations){
     resultDiv.innerHTML = '';
 
@@ -63,7 +57,7 @@ function displayRecommendation(recommendations){
 searchBtn.addEventListener('click', function(event){
     event.preventDefault();
     const userInput = document.getElementById('searchBar').value.trim();
-    searchAndDisplay(userInput);
+    searchRecommendation(userInput);
 });
 
 //   // Event listener for search button click
