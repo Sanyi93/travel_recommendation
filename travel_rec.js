@@ -2,7 +2,8 @@ const searchBtn = document.getElementById('searchBtn');
 const clearBtn = document.getElementById('clearBtn');
 const resultDiv = document.getElementById('searchCondition');
 const inputPlace = document.getElementById('searchBar');
-const input = inputPlace.innerText.toLowerCase().valueOf.trim;
+const input = inputPlace.value.trim();
+// const input = inputPlace.innerHTML.toLowerCase();
 let recommendations = [];
 
 function searchRecommendation(input){
@@ -21,8 +22,8 @@ function searchRecommendation(input){
                         resultDiv.innerHTML = 'We apologize, we could not provide you any recommendation';
                         return;
                     }
-
                     displayRecommendation(recommendations);
+
                 }).catch(error => {
                     console.error('Error: ', error);
                     resultDiv.innerHTML = 'Data could not be fetched, try again later, please';
@@ -45,12 +46,15 @@ function displayRecommendation(recommendations){
                 <img src="${recommendation.imageUrl}" alt="${recommendation.name}">
                 <h2>${recommendation.name}</h2>
                 <p>${recommendation.description}</p>
-                <a href="#book-now" class="book-now-button">Visit</a>`;
-                resultDiv.appendChild(result)
+                <button id="bookNowBtn">Visit</button>`;
 
-        
+                resultDiv.appendChild(result);
     });
 
+}
+
+function clearInput(){
+    inputPlace.innerHTML = '';
 }
 
 //Assigning event listeners
@@ -59,6 +63,8 @@ searchBtn.addEventListener('click', function(event){
     const userInput = document.getElementById('searchBar').value.trim();
     searchRecommendation(userInput);
 });
+
+clearBtn.addEventListener('onclick', clearInput);
 
 //   // Event listener for search button click
 //   searchButton.addEventListener('click', function(event) {
