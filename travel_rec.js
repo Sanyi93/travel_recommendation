@@ -46,7 +46,7 @@ function displayRecommendation(recommendations){
                 <img src="${recommendation.imageUrl}" alt="${recommendation.name}">
                 <h2>${recommendation.name}</h2>
                 <p>${recommendation.description}</p>
-                <button id="bookNowBtn">Visit</button>`;
+                <button id="visit">Visit</button>`;
 
                 resultDiv.appendChild(result);
     });
