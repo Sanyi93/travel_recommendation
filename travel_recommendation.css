@@ -135,9 +135,9 @@ img {
    #searchCondition {
     position: absolute;
     top: 10%;
-    left: 60%;
-    max-width: 500px; 
-    /* margin-left: 400px;  */
+    left: 55%;
+    max-width: 600px; 
+    color: whitesmoke;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -167,8 +167,8 @@ img {
    .result1 p{
     position: relative;
     color: whitesmoke;
-    width: 100%;
-    display: block;
+    display:contents;
+    width: 90%;
 } 
 
 
@@ -231,14 +231,18 @@ body p{
     margin-left: 100px;
     color: whitesmoke;
     background-color: darkgreen;
-    border-readius: 25px;
+    border-radius: 25px;
 }
 
 #visit {
+    position:relative;
+    display: inline-block;
     margin-left: 100px;
     color: whitesmoke;
     background-color: darkgreen;
     border-radius: 25px;
     padding-bottom: 2px;
+    margin-left: 5px;
     margin-bottom: 3px;
+  
 }
