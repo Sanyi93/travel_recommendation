@@ -43,11 +43,10 @@ function displayRecommendation(recommendations){
         const result = document.createElement('div');
         result.classList.add('result1');
         result.innerHTML = `
-                <button id="visit">Visit</button>
                 <img src="${recommendation.imageUrl}" alt="${recommendation.name}">
                 <h2>${recommendation.name}</h2>
-                <p>${recommendation.description}</p>
-                // <button id="visit">Visit</button>`;
+                <button id="visit">Visit</button><br>
+                <p>${recommendation.description}</p>`;
 
                 resultDiv.appendChild(result);
     });

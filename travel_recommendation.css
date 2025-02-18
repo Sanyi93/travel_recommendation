@@ -237,12 +237,9 @@ body p{
 #visit {
     position:relative;
     display: inline-block;
-    margin-left: 100px;
+    margin-left: 240px;
     color: whitesmoke;
     background-color: darkgreen;
     border-radius: 25px;
-    padding-bottom: 2px;
-    margin-left: 5px;
-    margin-bottom: 3px;
-  
+    padding-bottom: 2px;  
 }
