@@ -123,15 +123,6 @@ img {
     text-align: center;
    }
 
-   /* .result1 {
-    position: relative;
-    margin-left: 700px;
-    color: whitesmoke;
-    width: 600px;
-    display: block;
-    font-weight: 150;
-   } */
-
    #searchCondition {
     position: absolute;
     top: 10%;
@@ -148,21 +139,6 @@ img {
     margin-bottom: 10px;
     overflow: hidden;
    }
-
-   /* .result1 {
-    position: absolute;
-    top: 20%;
-    left: 70%;
-    width: 500px;
-    display: flex;
-    flex-wrap: wrap;
-    font-weight: 150px;
-    padding: 50px;
-    margin-bottom: 70px;
-    justify-content: space-between;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-   } */
 
    .result1 p{
     position: relative;
