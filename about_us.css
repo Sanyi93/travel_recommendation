@@ -54,27 +54,20 @@
   
   }
   
+  
 
-  /* 
-  nav input {
-      position: relative;
-      width: 70%;
-      color: green;
-      float:none;
-  } */
-  
-  
-  
   /*body & other elements */
   
-  body {
-      margin: 0;
-      background-image: url("./backgroundImg.jpg");
-      background-repeat: no-repeat;
-      background-blend-mode:saturation;
-      height: 100vh;
-      width: 100%;
-  }
+body {
+    margin: 0;
+    background-image: url("./backgroundImg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:saturation;
+    height: 100vh;
+    width: 100%;
+    }
   
   h1 {
       position: relative;

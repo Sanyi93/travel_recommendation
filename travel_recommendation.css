@@ -68,16 +68,8 @@ nav ul div li a{
 }
 
 #searchBar {
-    /* box-sizing: border-box;
-    border-radius: 30px;
     position: relative;
-    width: 70%;
-    border-color: white; */
-    position: relative;
-    right: 25%;
-    /* top: 0; */
-    /* left: 0; */
-    /* margin-left:0; */
+    right: 15%;
     text-align: left;
     width: 60%;
     height: 30px;
@@ -98,15 +90,6 @@ form button {
     color: whitesmoke;
     background-color: darkgreen;
 }
-
-
-/* 
-nav input {
-    position: relative;
-    width: 70%;
-    color: green;
-    float:none;
-} */
 
 img {
     box-sizing: border-box;
